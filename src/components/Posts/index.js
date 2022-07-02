@@ -18,15 +18,15 @@ function Posts({
           <tr>
             <th>
               <button onClick={() => sortByFirstName(posts)} className="w-full">
-                Full Name
+                FULLNAME
               </button>
             </th>
             <th>
               <button onClick={() => sortByUserName(posts)} className="w-full">
-                Username
+                USERNAME
               </button>
             </th>
-            <th>Thumbnail Icon</th>
+            <th>THUMBNAIL ICON</th>
           </tr>
         </thead>
         <tbody>

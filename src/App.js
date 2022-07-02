@@ -25,19 +25,19 @@ function App() {
     fetchPosts();
   }, []);
 
+  useEffect(() => {}, [posts]);
+
   //Sort array
   const handlerSortByFirstName = (posts) => {
     posts.sort((a, b) => a.name.first.localeCompare(b.name.first));
-    console.log(posts);
-    currentPost = posts.slice(indexOfFirstPost, indexOfLastPost);
-    console.log(currentPost);
-    setPosts(posts);
+    currentPost = posts.slice(0, 100);
+    setPosts(currentPost);
   };
 
   const handlerSortByUserName = (posts) => {
     posts.sort((a, b) => a.login.username.localeCompare(b.login.username));
-    setPosts(posts);
-    currentPost = posts.slice(indexOfFirstPost, indexOfLastPost);
+    currentPost = posts.slice(0, 100);
+    setPosts(currentPost);
   };
 
   const handlerPaginate = (pageNumber) => setCurrentPage(pageNumber);
